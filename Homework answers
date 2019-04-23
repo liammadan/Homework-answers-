@@ -1,0 +1,115 @@
+
+/**
+ * This program helps find the answers to your homework assignments
+ *
+ * @Liam Madan
+ * @4/23
+ */
+import java.util.Scanner;
+public class UnitTriangle
+{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        //This section is for the name and date
+        System.out.println("What is your first name");
+        String firstName= in.nextLine();
+        
+        System.out.println("What is your last name");
+        String lastName= in.nextLine();
+        
+        System.out.println("What month is it");
+        String month= in.nextLine();
+        
+        System.out.println("What day is it");
+        int day =in.nextInt();
+        
+        System.out.println("What year is it");
+        int year =in.nextInt();
+        
+        //problem #1
+        System.out.println("Assume you have a triangle, what is the length of side a?");
+        double sideOne = in.nextDouble();
+        
+        System.out.println("What is the length of side b?");
+        double sideTwo = in.nextDouble();
+        
+        System.out.println("What is the length of side c?");
+        double sideThree = in.nextDouble();
+        
+        double perimeter =(sideOne + sideTwo + sideThree);
+        
+        //finding s, and then finding the whole area 
+        double semi = ((sideOne + sideTwo + sideThree)/2);
+        double area = (Math.sqrt(semi*((semi - sideOne)*(semi-sideTwo)*(semi-sideThree))));
+        
+        //problem #2
+        System.out.println("Assume you have this paragraph");
+        System.out.println("It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire. During the battle,Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the DEATHSTAR, an armored space station with enough power to destroy an entire planet.");
+        System.out.println("How many charecters are in each sentance?");
+        String paragraph = "It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire. During the battle,Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the DEATHSTAR, an armored space station with enough power to destroy an entire planet.";
+        
+        int length = paragraph.length();
+        //finding the first period, then finding the next two using +1
+        int periodOne = paragraph.indexOf(".");
+        int periodTwo = paragraph.indexOf('.',periodOne + 1);
+        int periodThree = paragraph.indexOf('.',periodTwo + 1);
+        
+        String first = paragraph.substring(0,periodOne);
+        String second = paragraph.substring(periodOne, periodTwo);
+        String third = paragraph.substring(periodTwo, periodThree);
+        
+        //after determing the three sentences, use these three ints to find the length
+        int numberFirst = first.length();
+        int numberSecond = second.length();
+        int numberThird = third.length();
+        
+        //problem #3
+        System.out.print("Now assume you need to make change, Please enter a dollar amount: ");
+        //finding the amount of dollars change by using division and mods
+        int dollaramount = in.nextInt();
+        int numTwenties = dollaramount/20;
+        int afterTwenties = dollaramount%20;
+        int numTens = afterTwenties/10;
+        int afterTens = afterTwenties%10;
+        int numFives = afterTens/5;
+        int afterFives = afterTens%5;
+        int numSingles = afterFives/1;
+        
+        
+        System.out.print("Please enter a cents amount: ");
+        //now finding the cents amount using the same strategy
+        int Centsamount = in.nextInt();
+        int NumQuarters = Centsamount/25;
+        int afterQuarters = Centsamount%25;
+        int NumDimes = afterQuarters/10;
+        int afterdimes = afterQuarters%10;
+        int NumNickels = afterdimes/5;
+        int afterNickels = afterdimes%5;
+        int NumPennies = afterNickels/1;
+        
+        System.out.print("Now find the correct amount of change. ");
+        
+        //final result
+        System.out.println("FINAL HOMEWORK ANSWERS");
+         
+        System.out.println("Name:" + " "  +  firstName +  " "  +  lastName );
+        System.out.println("Date:" + " "  +  month  +  " " +  day  +  " "   +  year );
+        System.out.println("The Perimeter is"  +  " "  + perimeter);
+        System.out.println("The area is"  +  " "  + area);
+        System.out.println("The number of charecters in the first line is"  +  " "  + numberFirst);
+        System.out.println("The number of charecters in the second line is"  +   " "  + numberSecond);
+        System.out.println("The number of charecters in the third line is"  +   " "  + numberThird);
+        
+        System.out.println("The change will be " + numTwenties + " twenties ");
+        System.out.println("Plus "  +  numTens  +  " tens ");
+        System.out.println("Plus "  +  numFives  +  " fives ");
+        System.out.println("Plus "  +  numSingles  + " singles ");
+        
+        System.out.println("And "  +  NumQuarters  +  " quarters ");
+        System.out.println("And "  +  NumDimes  +  " dimes ");
+        System.out.println("And "  +  NumNickels  +  " nickels ");
+        System.out.println("And "  +  NumPennies  +  " pennies ");
+    }
+}
+
