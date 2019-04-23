@@ -1,5 +1,4 @@
 
-
 /**
  * This program helps find the answers to your homework assignments
  *
@@ -96,12 +95,15 @@ public class HomeworkAnswers
          
         System.out.println("Name:" + " "  +  firstName +  " "  +  lastName );
         System.out.println("Date:" + " "  +  month  +  " " +  day  +  " "   +  year );
+        System.out.println("Number One:");
         System.out.println("The Perimeter is"  +  " "  + perimeter);
         System.out.println("The area is"  +  " "  + area);
+        System.out.println("Number Two:");
         System.out.println("The number of charecters in the first line is"  +  " "  + numberFirst);
         System.out.println("The number of charecters in the second line is"  +   " "  + numberSecond);
         System.out.println("The number of charecters in the third line is"  +   " "  + numberThird);
         
+        System.out.println("Number Three:");
         System.out.println("The change will be " + numTwenties + " twenties ");
         System.out.println("Plus "  +  numTens  +  " tens ");
         System.out.println("Plus "  +  numFives  +  " fives ");
@@ -113,5 +115,4 @@ public class HomeworkAnswers
         System.out.println("And "  +  NumPennies  +  " pennies ");
     }
 }
-
 
